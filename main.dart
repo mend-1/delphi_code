@@ -70,25 +70,33 @@ class _FirstPageState extends State<FirstPage> {
                   height: 10,
                 ),
                 Container(
-                  height: 25,
+                  height: 30,
                   width: 95,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
                     color: Colors.amberAccent,
                   ),
-                  child: const Center(
-                    child: Text(
-                      "+50",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                        color: Colors.white,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image(
+                        image: AssetImage("assets/coind.png"),
+                        height: 30,
                       ),
-                    ),
+                      Padding(padding: EdgeInsets.only(right: 10)),
+                      Text(
+                        "+50",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
                 SizedBox(
-                  height: 151,
+                  height: 146,
                 ),
                 Center(
                   child: Padding(
@@ -105,21 +113,22 @@ class _FirstPageState extends State<FirstPage> {
                           borderRadius: BorderRadius.circular(15),
                           color: Colors.indigo,
                         ),
-                        child: const ListTile(
-                          leading: Icon(
-                            Icons.done,
-                            color: Colors.white,
-                          ),
-                          title: Center(
-                            child: Text(
-                              "COLLECT",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20,
-                                color: Colors.white,
-                              ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Icon(
+                              Icons.check,
+                              color: Colors.white,
+                              size: 30,
                             ),
-                          ),
+                            const Text(
+                              " COLLECT",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20),
+                            ),
+                          ],
                         ),
                       ),
                     ),
